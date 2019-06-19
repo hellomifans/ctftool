@@ -1,6 +1,6 @@
 #基于python3的一些简单函数，不需要另外安装库，应该还会持续更新。
 #本人小弱鸡，有问题也希望大家及时指正。
-
+#其中的缩进全都是tab，如果要改动的话注意一哈
 import base64
 # import base91
 import os
@@ -121,15 +121,18 @@ def GCD(a,b):
     else :
         return GCD(b,a%b)
 		
+	
 #返回输入的MD5值		
 def MD5(s):
 	s=bytes(s.encode("utf-8"))
 	return hashlib.md5(s).hexdigest()
 	
+	
 #返回输入的sha1值		
 def SHA1(s):
 	s=bytes(s.encode("utf-8"))
 	return hashlib.sha1(s).hexdigest()
+	
 	
 #返回输入的sha256值		
 def SHA256(s):
@@ -167,6 +170,7 @@ def COUNT(s):
 	for i in range(len(SET)):
 		SET[i]=SET[i]+" : "+str(s.count(SET[i]))
 	return SET
+	
 	
 #提取字符串，第1个参数为原字符串，第2个参数为所需提取的字符串的左边，第3个参数为所需提取的字符串的右边，表达的不是很清楚，自己体会就好了。 (*/ω＼*)
 def FIND(str,set1,set2):
